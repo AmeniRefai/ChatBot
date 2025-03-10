@@ -1,7 +1,7 @@
 import ChatbotIcon from "./components/ChatbotIcon";
 import ChatForm from "./components/ChatForm";
 import { useState } from "react";
-
+import ChatMeassage from "./components/ChatMessage";
 const App = () => {
   const [chatHistory, setChatHistory] = useState([]);
   return (
@@ -24,11 +24,10 @@ const App = () => {
               I'm a Chatbot. How can I help you today?
             </p>
           </div>
-          <div className="message user-message">
-            <p className="message-text">
-              lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-          </div>
+
+          {chatHistory.map((chat, index) => (
+            <ChatMeassage key={index} chat={chat} />
+          ))}
         </div>
         {/* chat-footer */}
         <div className="chat-footer">
