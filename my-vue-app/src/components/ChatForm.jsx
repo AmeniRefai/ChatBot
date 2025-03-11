@@ -10,12 +10,16 @@ const ChatForm = ({ setChatHistory }) => {
     const userMessage = inputRef.current.value.trim(); //Njibou value mta3 l'input, nfarskhou l'espaces f l9bal w lakhir (trim()), w ken fargha ma na3mlou chay.
     if (!userMessage) return;
 
-    inputRef.current.value = ""; //Ba3d ma l'utilisateur yeb3eth message, nkhali l'input fargh.
+    //Ba3d ma l'utilisateur yeb3eth message, nkhali l'input fargh.
 
+    inputRef.current.value = "";
     setChatHistory((history) => [
       ...history,
+      // exemple d'un message mta3 l'utilisateur : { role: "user", text: "Hello" }
       { role: "user", text: userMessage },
-    ]); //Najoutiw message mta3 l'utilisateur f l'array chatHistory.
+    ]);
+
+    //Najoutiw message mta3 l'utilisateur f l'array chatHistory.
     console.log(userMessage);
   };
   return (

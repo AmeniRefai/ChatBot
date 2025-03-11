@@ -27,6 +27,7 @@ const App = () => {
               I'm a Chatbot. How can I help you today?
             </p>
           </div>
+
           {/* chatHistory.map() ta3mel boucle 3al messages li mawjoudin f chatHistory.
            chat : hiyya l'élément wa7ed wa7ed men chatHistory.
            index : houwa numéro mta3 l'élément fel liste.
@@ -37,6 +38,7 @@ const App = () => {
             <ChatMessage key={index} chat={chat} />
           ))}
         </div>
+
         {/* chat-footer */}
         <div className="chat-footer">
           <ChatForm setChatHistory={setChatHistory} />
