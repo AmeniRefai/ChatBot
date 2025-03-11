@@ -2,6 +2,7 @@ import ChatbotIcon from "./components/ChatbotIcon";
 import ChatForm from "./components/ChatForm";
 import { useState } from "react";
 import ChatMeassage from "./components/ChatMessage";
+import ChatMessage from "./components/ChatMessage";
 const App = () => {
   //hiyya une state li t7at fiha les messages mta3 l'utilisateur, useState([]) ykhalih fargh f l'awel (une liste vide).
   //➡️ Na3mlou state chatHistory bech nkhaznou fiha les messages mta3 l'utilisateur w bech najmou nbadlouha b setChatHistory.
@@ -33,7 +34,7 @@ const App = () => {
            key={index} : bech React y9der y3rf chaque élément b index w yoptimize l'affichage. */}
 
           {chatHistory.map((chat, index) => (
-            <ChatMeassage key={index} chat={chat} />
+            <ChatMessage key={index} chat={chat} />
           ))}
         </div>
         {/* chat-footer */}
